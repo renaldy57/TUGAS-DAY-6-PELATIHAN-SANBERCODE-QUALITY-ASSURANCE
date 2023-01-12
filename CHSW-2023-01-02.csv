@@ -1,0 +1,116 @@
+id,title,description,preconditions,postconditions,tags,priority,severity,type,behavior,automation,status,is_flaky,layer,steps_type,steps_actions,steps_result,steps_data,milestone_id,milestone,suite_id,suite_parent_id,suite,suite_without_cases,parameters
+,,,,,,,,,,,,,,,,,,,,1,,"Log In",1
+,,,,,,,,,,,,,,,,,,,,2,,"Log Out",1
+,,,,,,,,,,,,,,,,,,,,3,,"Make Appointment",1
+,,,,,,,,,,,,,,,,,,,,4,,"Social Media",1
+1,"Verify Login Successfully",,"Already Have Username & Password","Redirect to Appointment page",,high,major,functional,positive,is-not-automated,actual,no,e2e,classic,"1. Go to URL https://katalon-demo-cura.herokuapp.com/
+2. Click The Three Lines button in the top right corner
+3. Click Log in button
+4. Input Valid Username
+5. Input Valid Password
+6. Click Log in button
+","1. Successfully redirect to CURA Health Service page
+2. Appear the menu
+3. Redirect to Log in page
+4. Username Appear
+5. Password Appear
+6. Success Logged in
+","1. 
+2. 
+3. 
+4. John Doe
+5. ThisIsNotAPassword
+6. 
+",,,1,,"Log In",,
+2,"Verify Login Failed (Invalid Password)",,"Already Have Username & Password","Showing Error Message and Redirect back to Log in page",,high,major,functional,negative,is-not-automated,actual,no,e2e,classic,"1. Go to URL https://katalon-demo-cura.herokuapp.com/
+2. Click The Three Lines button in the top right corner
+3. Click Log in button
+4. Input Valid Username
+5. Input WRONG Password
+6. Click Log in button
+","1. Successfully redirect to CURA Health Service page
+2. Appear the menu
+3. Redirect to Log in page
+4. Username Appear
+5. Password Appear
+6. Failed Log in
+","1. 
+2. 
+3. 
+4. John Doe
+5. LoginPassword
+6. 
+",,,1,,"Log In",,
+3,"Verify Login Failed (Blank Field)",,,"Showing Error Message and Redirect back to Log in page",,high,major,functional,negative,is-not-automated,actual,no,e2e,classic,"1. Go to URL https://katalon-demo-cura.herokuapp.com/
+2. Click The Three Lines button in the top right corner
+3. Click Log in button
+4. Blank Username
+5. Blank Username
+6. Click Log in button
+","1. Successfully redirect to CURA Health Service page
+2. Appear the menu
+3. Redirect to Log in page
+4. Username Not Appear
+5. Username Not Appear
+6. Failed Log in
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+",,,1,,"Log In",,
+4,"Verify Log out Successfully",,"Sucessfully Login (CHSW-1)","Redirect to [https://katalon-demo-cura.herokuapp.com](https://katalon-demo-cura.herokuapp.com/)/",,high,critical,functional,positive,is-not-automated,actual,no,e2e,classic,"1. Click The Three Lines button in the top right corner
+2. Click Log out button
+","1. Appear the menu
+2. Success Logged out
+","1. 
+2. 
+",,,2,,"Log Out",,
+5,"Verify Login Before Make Appointment",,"Go to URL [https://katalon-demo-cura.herokuapp.com/](https://katalon-demo-cura.herokuapp.com/)","Redirect to Log in page",,high,critical,functional,positive,is-not-automated,actual,no,e2e,classic,"1. Click Make Appoinment button
+","1. Ask to login first
+","1. 
+",,,3,,"Make Appointment",,
+6,"Verify Book Appoinment",,"Sucessfully Login (CHSW-1)","Redirect to Appointment Summary page",,high,critical,functional,positive,is-not-automated,actual,no,e2e,classic,"1. Click Facility option and select
+2. Select Healthcare Program
+3. Click Visit Date and select
+4. Write Comment
+5. Click Book Appointment button
+","1. Facility option appear
+2. Healthcare Program selected
+3. Visit Date Appear
+4. Comment Appear
+5. Success Book Appointment
+","1. Tokyo CURA Healthcare Center
+2. Medicare
+3. 31/01/2023
+4. I want to book appointment
+5. 
+",,,3,,"Make Appointment",,
+7,"Verify Failed when Book Appoinment",,"Sucessfully Login (CHSW-1)","Showing Error Message on Visit Date",,high,critical,functional,negative,is-not-automated,actual,no,e2e,classic,"1. Click Facility option and select
+2. Select Healthcare Program
+3. Write Comment
+4. Click Book Appointment button
+","1. Facility option appear
+2. Healthcare Program selected
+3. Comment Appear
+4. Failed Book Appointment
+","1. Tokyo CURA Healthcare Center
+2. Medicare
+3. I want to book appointment
+4. 
+",,,3,,"Make Appointment",,
+8,"Verify Facebook",Un-Developed,"CURA Health Service page",,,low,minor,functional,positive,is-not-automated,draft,no,e2e,classic,"1. Go to URL [https://katalon-demo-cura.herokuapp.com/](https://katalon-demo-cura.herokuapp.com/)
+2. Click Facebook icon
+","1. Successfully redirect to CURA Health Service page
+2. Redirect to Facebook page
+","1. 
+2. 
+",,,4,,"Social Media",,
+9,"Verify Twitter",Un-Developed,"CURA Health Service page",,,low,minor,functional,positive,is-not-automated,draft,no,e2e,classic,"1. Go to URL [https://katalon-demo-cura.herokuapp.com/](https://katalon-demo-cura.herokuapp.com/)
+2. Click Twitter icon
+","1. Successfully redirect to CURA Health Service page
+2. Redirect to Twitter page
+","1. 
+2. 
+",,,4,,"Social Media",,
